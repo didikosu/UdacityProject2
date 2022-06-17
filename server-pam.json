@@ -4,8 +4,8 @@
 		"ParameterValue": "UdacityProject"
     },
     {
-    "ParameterKey": "AMIServers",
-    "ParameterValue": "ami-0729e439b6769d6ab"
+        "ParameterKey": "AMIServers",
+        "ParameterValue": "ami-0729e439b6769d6ab"
     }
 
 ]
