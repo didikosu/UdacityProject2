@@ -223,7 +223,7 @@ Resources:
       Type: AWS::EC2::Instance
       Properties:
         ImageId: ami-0cff7528ff583bf9a
-        KeyName: bastion
+        #KeyName: 
         InstanceType: t2.micro
         Tags:
           - Key: Name
@@ -333,7 +333,7 @@ Resources:
                 cd /var/www/html
                 echo "Yay! I made it here" > index.html
         ImageId: ami-0729e439b6769d6ab
-        KeyName: dini-kosu
+        #KeyName:
         IamInstanceProfile: !Ref ProfileWithRolesForOurApp
         SecurityGroups:
         -   Ref: WebServerSecGroup
