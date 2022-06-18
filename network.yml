@@ -27,9 +27,9 @@ Parameters:
         Description: Please enter the IP range (CIDR notation) for the Subnet
         Type: String
 
-    BastionSubnetCIDR:
-        Description: Please enter the IP range (CIDR notation) for the Subnet
-        Type: String
+    # BastionSubnetCIDR:
+    #     Description: Please enter the IP range (CIDR notation) for the Subnet
+    #     Type: String
 
       
 
@@ -102,16 +102,16 @@ Resources:
               - Key: Name
                 Value: !Sub ${EnvironmentName} Public Subnet (AZ2)
 
-    BastionSubnet:
-        Type: AWS::EC2::Subnet
-        Properties:
-          VpcId: !Ref VPC 
-          AvailabilityZone: !Select [ 0, !GetAZs '' ]
-          CidrBlock: !Ref BastionSubnetCIDR
-          MapPublicIpOnLaunch: true 
-          Tags: 
-              - Key: Name
-                Value: !Sub ${EnvironmentName} Public Subnet for bastion Host (AZ1)
+    # BastionSubnet:
+    #     Type: AWS::EC2::Subnet
+    #     Properties:
+    #       VpcId: !Ref VPC 
+    #       AvailabilityZone: !Select [ 0, !GetAZs '' ]
+    #       CidrBlock: !Ref BastionSubnetCIDR
+    #       MapPublicIpOnLaunch: true 
+    #       Tags: 
+    #           - Key: Name
+    #             Value: !Sub ${EnvironmentName} Public Subnet for bastion Host (AZ1)
     
 
     NatGateway1EIP:
@@ -212,11 +212,11 @@ Resources:
             RouteTableId: !Ref PublicRouteTable
             SubnetId: !Ref PublicSubnet2
 
-    BastionSubnetRouteTableAssociation:
-        Type: AWS::EC2::SubnetRouteTableAssociation
-        Properties:
-            RouteTableId: !Ref PublicRouteTable
-            SubnetId: !Ref BastionSubnet
+    # BastionSubnetRouteTableAssociation:
+    #     Type: AWS::EC2::SubnetRouteTableAssociation
+    #     Properties:
+    #         RouteTableId: !Ref PublicRouteTable
+    #         SubnetId: !Ref BastionSubnet
 
 Outputs:
 
@@ -262,8 +262,8 @@ Outputs:
         Export:
           Name: !Sub ${EnvironmentName}-PRIV2-SN
     
-    BastionSubnets:
-        Description: Bastion subnets
-        Value: !Ref BastionSubnet
-        Export:
-          Name: !Sub "${EnvironmentName}-BAST"    
+    # BastionSubnets:
+    #     Description: Bastion subnets
+    #     Value: !Ref BastionSubnet
+    #     Export:
+    #       Name: !Sub "${EnvironmentName}-BAST"    

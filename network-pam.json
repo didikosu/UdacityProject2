@@ -1,7 +1,7 @@
 [
 	{
 		"ParameterKey": "EnvironmentName",
-		"ParameterValue": "UdacityProject"
+		"ParameterValue": "Udacity-Proj2"
 	},
 	{
 		"ParameterKey": "VpcCIDR",
@@ -22,10 +22,5 @@
 	{
 		"ParameterKey": "PublicSubnet2CIDR",
 		"ParameterValue": "10.0.3.0/24"
-	},
-    {
-        "ParameterKey": "BastionSubnetCIDR",
-        "ParameterValue": "10.0.5.0/24"
-    }
-	
+	}
 ]

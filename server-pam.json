@@ -1,7 +1,7 @@
 [
     {
         "ParameterKey": "EnvironmentName",
-		"ParameterValue": "UdacityProject"
+		"ParameterValue": "Udacity-Proj2"
     },
     {
         "ParameterKey": "AMIServers",
